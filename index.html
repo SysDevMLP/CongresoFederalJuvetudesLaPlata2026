@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Congreso Federal e Internacional de Juventudes 2026 | Municipalidad de La Plata</title>
+  <meta name="description" content="14 y 15 de septiembre de 2026 en La Plata. Tercera edición del Congreso Federal e Internacional de Juventudes, organizada por la Dirección General de Juventudes.">
+  <style>
+    :root {
+      --blue: #004a80;
+      --blue-hover: #003a66;
+      --gold: #f3b021;
+      --gold-hover: #d99a12;
+      --text: #222;
+      --muted: #6b6b6b;
+      --footer-bg: #f4f4f4;
+      --line: #e6e6e6;
+      --cyan: #79d1d5;
+      --teal: #59b4cd;
+      --sky: #4292c6;
+      --lime: #99d038;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.55;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: url("assets/portada.jpg") center / contain no-repeat;
+      opacity: 0.12;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    main,
+    footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      flex: 1 0 auto;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 36px 28px 32px;
+    }
+
+    .accent {
+      width: 72px;
+      height: 4px;
+      background: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    .breadcrumb svg {
+      flex-shrink: 0;
+      color: #8a8a8a;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      color: var(--blue);
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      line-height: 1.25;
+    }
+
+    .meta {
+      margin: 0 0 22px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .content p {
+      margin: 0 0 16px;
+      font-size: 15px;
+      text-align: justify;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin: 8px 0 48px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 230px;
+      padding: 12px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      transition: background-color 0.15s ease;
+    }
+
+    .btn-blue {
+      background: var(--blue);
+    }
+
+    .btn-blue:hover,
+    .btn-blue:focus-visible {
+      background: var(--blue-hover);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      min-width: 0;
+      padding: 10px 18px;
+      font-size: 14px;
+      letter-spacing: 0.4px;
+    }
+
+    .btn-gold:hover,
+    .btn-gold:focus-visible {
+      background: var(--gold-hover);
+    }
+
+    .back {
+      margin-top: 8px;
+    }
+
+    footer {
+      flex-shrink: 0;
+      margin-top: auto;
+      background: var(--footer-bg);
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 12px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-logos img {
+      display: block;
+      height: 42px;
+      width: auto;
+      max-width: min(420px, 100%);
+      object-fit: contain;
+    }
+
+    .footer-contact {
+      text-align: right;
+      color: var(--blue);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .social-label {
+      margin: 0 0 4px;
+      font-weight: 700;
+    }
+
+    .social {
+      display: flex;
+      justify-content: flex-end;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .social a {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .social a:hover,
+    .social a:focus-visible {
+      background: var(--blue-hover);
+    }
+
+    .social svg {
+      width: 13px;
+      height: 13px;
+      fill: currentColor;
+    }
+
+    .footer-contact p {
+      margin: 0;
+    }
+
+    .footer-links {
+      margin-top: 4px;
+      font-size: 11px;
+      color: #5a7a96;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus-visible {
+      text-decoration: underline;
+    }
+
+    .color-bar {
+      display: flex;
+      height: 5px;
+    }
+
+    .color-bar span { flex: 1; }
+    .c1 { background: var(--cyan); }
+    .c2 { background: var(--teal); }
+    .c3 { background: var(--sky); }
+    .c4 { background: var(--blue); }
+    .c5 { background: var(--lime); }
+
+    @media (max-width: 800px) {
+      .wrap { padding: 28px 18px 40px; }
+      h1 { font-size: 22px; }
+      .meta { font-size: 16px; }
+      .actions { gap: 14px; }
+      .btn { min-width: 100%; }
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 18px;
+      }
+      .footer-logos img { height: 36px; }
+      .footer-contact,
+      .social {
+        text-align: left;
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="accent" aria-hidden="true"></div>
+
+    <p class="breadcrumb">
+      <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M6 2h9.2L20 7.8V22H6V2zm8 1.5V8h5.3L14 3.5zM8 10h8v1.6H8V10zm0 3.2h8v1.6H8v-1.6zm0 3.2h5.5V18H8v-1.6z"/>
+      </svg>
+      Programas 2026, Dirección General de Juventudes
+    </p>
+
+    <h1>Congreso Federal e Internacional de Juventudes 2026</h1>
+    <p class="meta">14 y 15 de septiembre de 2026 – La Plata, Buenos Aires, Argentina.</p>
+
+    <div class="content">
+      <p>El Congreso Federal e Internacional de Juventudes 2026 propone un espacio de encuentro y construcción colectiva donde la juventud de Argentina y el mundo se reúne a debatir, compartir experiencias y aportar miradas para responder a los desafíos actuales.</p>
+      <p>El Congreso Federal e Internacional de Juventudes llega a La Plata para celebrar su tercera edición, luego de dos encuentros realizados en la ciudad de Córdoba. A 50 años de la Noche de los Lápices, La Plata vuelve a ser escenario de un encuentro que pone a las juventudes en el centro de la construcción democrática. Memoria, democracia y participación juvenil atraviesan el espíritu de esta edición.</p>
+      <p>Durante los dos días del Congreso se desarrollarán conversatorios, paneles, mesas de debate y espacios interactivos que abordarán los principales desafíos de las juventudes. Entre los ejes temáticos a debatir se destacan: salud mental y entornos digitales, trabajo y emprendedurismo, género y diversidad, ambiente, derechos humanos, entre otros. Estas instancias permitirán el intercambio de perspectivas, la construcción de consensos y la generación de propuestas colectivas con impacto local, nacional e internacional sobre la nueva agenda prioritaria de la juventud actual.</p>
+      <p>Desde la Dirección General de Juventudes de la Municipalidad de La Plata te esperamos los próximos 14 y 15 de septiembre a participar de la Tercera edición del Congreso Federal e Internacional de Juventudes.</p>
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-blue" href="https://forms.gle/PpwikkYkECFZmmFu9" target="_blank" rel="noopener noreferrer">Inscripción</a>
+      <a class="btn btn-blue" href="">Programa del Congreso</a>
+      <a class="btn btn-blue" href="">Presentación Institucional</a>
+    </div>
+
+    <p class="back">
+      <a class="btn btn-gold" href="https://www.laplata.gob.ar/" target="_blank" rel="noopener noreferrer">&lt;&lt; VOLVER ATRÁS</a>
+    </p>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logos">
+        <img src="assets/footer-logos.jpg" alt="Córdoba Capital, La Plata Capital y Municipalidad de La Plata" width="520" height="88">
+      </div>
+      <div class="footer-contact">
+        <p class="social-label">Seguinos en</p>
+        <div class="social">
+          <a href="https://www.instagram.com/laplata.capital/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm5 4.8A4.2 4.2 0 1 0 16.2 12 4.2 4.2 0 0 0 12 7.8zm0 6.9A2.7 2.7 0 1 1 14.7 12 2.7 2.7 0 0 1 12 14.7zm5.35-7.85a1 1 0 1 0 1 1 1 1 0 0 0-1-1z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/MunicipalidadDeLaPlata" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.6 9.2V7.6c0-.7.5-1 1.2-1h1.5V4h-2.6c-2.6 0-4 1.6-4 4v1.2H8.4V12h2.3v8h3.9v-8h2.6l.4-2.8h-3z"/></svg>
+          </a>
+          <a href="https://x.com/laplatamlp" target="_blank" rel="noopener noreferrer" aria-label="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.77L22 21h-6.2l-4.86-6.35L5.1 21H2l7.27-8.31L2 3h6.36l4.39 5.82L17.5 3zm-1.09 16.17h1.72L7.62 4.73H5.77l10.64 14.44z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@laplataciudad" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12.2s0-3.2-.4-4.6a3 3 0 0 0-2.2-2.2C18.8 5 12 5 12 5s-6.8 0-8.4.4A3 3 0 0 0 1.4 7.6C1 9 1 12.2 1 12.2s0 3.2.4 4.6a3 3 0 0 0 2.2 2.2C5.2 19.4 12 19.4 12 19.4s6.8 0 8.4-.4a3 3 0 0 0 2.2-2.2c.4-1.4.4-4.6.4-4.6zM9.8 15.6V8.8l6.4 3.4-6.4 3.4z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/municipalidad-de-la-plata" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 9.5H3.7V20h2.8V9.5zM5.1 4A1.6 1.6 0 1 0 5.1 7.2 1.6 1.6 0 0 0 5.1 4zM20.3 20h-2.8v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V20H11V9.5h2.7v1.4h.1a3 3 0 0 1 2.7-1.5c2.8 0 3.8 1.9 3.8 4.4V20z"/></svg>
+          </a>
+        </div>
+        <p>Municipalidad de La Plata · Dirección General de Juventudes</p>
+        <p>Av. 12 e/ 51 y 53, La Plata · 0221 429-1000</p>
+        <p class="footer-links">
+          <a href="https://www.laplata.gob.ar/" target="_blank" rel="noopener noreferrer">Sitio web institucional</a>
+        </p>
+      </div>
+    </div>
+    <div class="color-bar" aria-hidden="true">
+      <span class="c1"></span>
+      <span class="c2"></span>
+      <span class="c3"></span>
+      <span class="c4"></span>
+      <span class="c5"></span>
+    </div>
+  </footer>
+</body>
+</html>
