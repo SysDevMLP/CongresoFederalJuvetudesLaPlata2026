@@ -42,22 +42,6 @@
       flex-direction: column;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: url("assets/portada.jpg") center / contain no-repeat;
-      opacity: 0.12;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    main,
-    footer {
-      position: relative;
-      z-index: 1;
-    }
-
     a { color: inherit; }
 
     .wrap {
@@ -109,6 +93,14 @@
       margin: 0 0 16px;
       font-size: 15px;
       text-align: justify;
+    }
+
+    .header-image {
+      display: block;
+      width: 100%;
+      max-width: 620px;
+      height: auto;
+      margin: 0 auto 26px;
     }
 
     .actions {
@@ -288,6 +280,8 @@
       Programas 2026, Dirección General de Juventudes
     </p>
 
+    <img class="header-image" src="assets/encabezado.jpeg" alt="Congreso Federal de Juventudes La Plata 2026. Sept 14 y 15, La Plata, Provincia de Buenos Aires." width="1024" height="620">
+
     <h1>Congreso Federal e Internacional de Juventudes 2026</h1>
     <p class="meta">14 y 15 de septiembre de 2026 – La Plata, Buenos Aires, Argentina.</p>
 
@@ -300,8 +294,8 @@
 
     <div class="actions">
       <a class="btn btn-blue" href="https://forms.gle/PpwikkYkECFZmmFu9" target="_blank" rel="noopener noreferrer">Inscripción</a>
-      <a class="btn btn-blue" href="">Programa del Congreso</a>
-      <a class="btn btn-blue" href="">Presentación Institucional</a>
+      <a class="btn btn-blue" href="assets/congreso2026.pdf" target="_blank" rel="noopener noreferrer">Presentación</a>
+      <a class="btn btn-blue" href="">Consultas</a>
     </div>
 
     <p class="back">
